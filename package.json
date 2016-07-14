@@ -1,6 +1,6 @@
 {
   "name": "read-bplist",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Parse a Binary macOS Plist (.bplist) file",
   "repository": "shinnn/read-bplist",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
@@ -31,7 +31,6 @@
   ],
   "dependencies": {
     "bplist-parser": "^0.1.1",
-    "is-buffer": "^1.1.3",
     "pinkie-promise": "^2.0.1"
   },
   "devDependencies": {
