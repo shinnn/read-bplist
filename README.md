@@ -3,8 +3,8 @@
 [![NPM version](https://img.shields.io/npm/v/read-bplist.svg)](https://www.npmjs.com/package/read-bplist)
 [![Build Status](https://travis-ci.org/shinnn/read-bplist.svg?branch=master)](https://travis-ci.org/shinnn/read-bplist)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/read-bplist.svg)](https://coveralls.io/github/shinnn/is-gist-starred?branch=master)
-[![Dependency Status](https://david-dm.org/shinnn/read-bplist.svg)](https://david-dm.org/shinnn/read-bplist)
-[![devDependency Status](https://david-dm.org/shinnn/read-bplist/dev-status.svg)](https://david-dm.org/shinnn/read-bplist#info=devDependencies)
+[![dependencies Status](https://david-dm.org/shinnn/read-bplist/status.svg)](https://david-dm.org/shinnn/read-bplist)
+[![devDependencies Status](https://david-dm.org/shinnn/read-bplist/dev-status.svg)](https://david-dm.org/shinnn/read-bplist?type=dev)
 
 A [Node](https://nodejs.org/) module to parse a Binary macOS Plist (.bplist) file
 
