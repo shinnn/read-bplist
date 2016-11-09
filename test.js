@@ -2,7 +2,7 @@
 
 const bplist = require('bplist-creator');
 const readBplist = require('.');
-const rimrafPromise = require('rimraf-promise');
+const rmfr = require('rmfr');
 const test = require('tape');
 const writeFileAtomically = require('write-file-atomically');
 
@@ -18,7 +18,7 @@ test('readBplist()', t => {
   .then(data => {
     t.deepEqual(data, {a: 'b'}, 'should read and parse a .bplist file.');
   })
-  .then(() => rimrafPromise(tmpPath, {disableGlob: true}))
+  .then(() => rmfr(tmpPath))
   .catch(t.fail);
 
   readBplist('this/file/does/not/exist').then(t.fail, err => {
