@@ -1,4 +1,4 @@
-'use strong';
+'use strict';
 
 const bplist = require('bplist-creator');
 const readBplist = require('.');
