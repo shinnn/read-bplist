@@ -4,9 +4,9 @@
 */
 'use strict';
 
-const inspect = require('util').inspect;
+const {inspect} = require('util');
 
-const parseFile = require('bplist-parser').parseFile;
+const {parseFile} = require('bplist-parser');
 
 const ERR = 'Expected a path to the binary plist (.bplist) file';
 
