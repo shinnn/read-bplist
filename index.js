@@ -4,22 +4,21 @@
 */
 'use strict';
 
-const {inspect} = require('util');
-
+const inspectWithKind = require('inspect-with-kind');
 const {parseFile} = require('bplist-parser');
 
 const ERR = 'Expected a path to the binary plist (.bplist) file';
 
 module.exports = function readBplist(filePath) {
-  if (typeof filePath !== 'string') {
-    return Promise.reject(new TypeError(`${inspect(filePath)} is not a string. ${ERR}.`));
-  }
-
-  if (filePath === '') {
-    return Promise.reject(new Error(`${ERR}, but received an empty string.`));
-  }
-
   return new Promise((resolve, reject) => {
+    if (typeof filePath !== 'string') {
+      throw new TypeError(`${ERR}, but got ${inspectWithKind(filePath)}.`);
+    }
+
+    if (filePath === '') {
+      throw new Error(`${ERR}, but received '' (empty string).`);
+    }
+
     parseFile(filePath, (err, results) => {
       if (err) {
         reject(err);

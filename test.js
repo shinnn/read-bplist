@@ -40,7 +40,7 @@ test('readBplist()', t => {
   readBplist(new Set(['Hi'])).then(t.fail, err => {
     t.strictEqual(
       err.message,
-      'Set { \'Hi\' } is not a string. Expected a path to the binary plist (.bplist) file.',
+      'Expected a path to the binary plist (.bplist) file, but got Set { \'Hi\' }.',
       'should fail when it takes a non-string argument.'
     );
   });
@@ -48,16 +48,16 @@ test('readBplist()', t => {
   readBplist('').then(t.fail, err => {
     t.strictEqual(
       err.message,
-      'Expected a path to the binary plist (.bplist) file, but received an empty string.',
+      'Expected a path to the binary plist (.bplist) file, but received \'\' (empty string).',
       'should fail when it takes an empty string.'
     );
   });
 
   readBplist().then(t.fail, err => {
     t.strictEqual(
-      err.name,
-      'TypeError',
-      'should fail when it takes an empty string.'
+      err.message,
+      'Expected a path to the binary plist (.bplist) file, but got undefined.',
+      'should fail when it takes no arguments.'
     );
   });
 });
