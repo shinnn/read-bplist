@@ -7,7 +7,7 @@ const test = require('tape');
 const writeFileAtomically = require('write-file-atomically');
 
 test('readBplist()', t => {
-  t.plan(7);
+  t.plan(8);
 
   t.strictEqual(readBplist.name, 'readBplist', 'should have a function name.');
 
@@ -56,8 +56,16 @@ test('readBplist()', t => {
   readBplist().then(t.fail, err => {
     t.strictEqual(
       err.message,
-      'Expected a path to the binary plist (.bplist) file, but got undefined.',
+      'Expected 1 argument (string), but got no arguments instead.',
       'should fail when it takes no arguments.'
+    );
+  });
+
+  readBplist('0', '1').then(t.fail, err => {
+    t.strictEqual(
+      err.message,
+      'Expected 1 argument (string), but got 2 arguments instead.',
+      'should fail when it takes too many arguments.'
     );
   });
 });
