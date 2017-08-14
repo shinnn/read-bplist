@@ -31,16 +31,16 @@
   ],
   "dependencies": {
     "bplist-parser": "^0.1.1",
-    "inspect-with-kind": "^1.0.0"
+    "inspect-with-kind": "^1.0.2"
   },
   "devDependencies": {
-    "@shinnn/eslint-config-node": "^3.0.0",
-    "bplist-creator": "^0.0.7",
-    "eslint": "^3.9.1",
+    "@shinnn/eslint-config-node": "^4.0.2",
+    "bplist-creator": "0.0.7",
+    "eslint": "^4.4.1",
     "istanbul": "^0.4.5",
-    "rmfr": "^1.0.1",
+    "rmfr": "^1.0.3",
     "tap-spec": "^4.1.1",
-    "tape": "^4.6.2",
+    "tape": "^4.8.0",
     "write-file-atomically": "^1.0.0"
   },
   "eslintConfig": {
