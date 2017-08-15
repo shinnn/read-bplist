@@ -1,6 +1,6 @@
 {
   "name": "read-bplist",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Parse a Binary macOS Plist (.bplist) file",
   "repository": "shinnn/read-bplist",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@shinnn/eslint-config-node": "^4.0.2",
-    "bplist-creator": "0.0.7",
+    "bplist-creator": "^0.0.7",
     "eslint": "^4.4.1",
     "istanbul": "^0.4.5",
     "rmfr": "^1.0.3",
