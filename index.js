@@ -4,38 +4,32 @@
 */
 'use strict';
 
+const {promisify} = require('util');
+
 const inspectWithKind = require('inspect-with-kind');
 const {parseFile} = require('bplist-parser');
 
 const ERR = 'Expected a path to the binary plist (.bplist) file';
+const promisifiedParseFile = promisify(parseFile);
 
-module.exports = function readBplist(...args) {
-  return new Promise((resolve, reject) => {
-    const argLen = args.length;
+module.exports = async function readBplist(...args) {
+  const argLen = args.length;
 
-    if (argLen !== 1) {
-      throw new TypeError(`Expected 1 argument (string), but got ${
-        argLen === 0 ? 'no' : argLen
-      } arguments instead.`);
-    }
+  if (argLen !== 1) {
+    throw new TypeError(`Expected 1 argument (string), but got ${
+      argLen === 0 ? 'no' : argLen
+    } arguments instead.`);
+  }
 
-    const [filePath] = args;
+  const [filePath] = args;
 
-    if (typeof filePath !== 'string') {
-      throw new TypeError(`${ERR}, but got ${inspectWithKind(filePath)}.`);
-    }
+  if (typeof filePath !== 'string') {
+    throw new TypeError(`${ERR}, but got ${inspectWithKind(filePath)}.`);
+  }
 
-    if (filePath === '') {
-      throw new Error(`${ERR}, but received '' (empty string).`);
-    }
+  if (filePath.length === 0) {
+    throw new Error(`${ERR}, but got '' (empty string).`);
+  }
 
-    parseFile(filePath, (err, results) => {
-      if (err) {
-        reject(err);
-        return;
-      }
-
-      resolve(results[0]);
-    });
-  });
+  return (await promisifiedParseFile(filePath))[0];
 };
