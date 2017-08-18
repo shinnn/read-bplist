@@ -1,7 +1,7 @@
 {
   "name": "read-bplist",
-  "version": "0.6.0",
-  "description": "Parse a Binary macOS Plist (.bplist) file",
+  "version": "1.0.0",
+  "description": "Parse a macOS Binary Plist (.bplist) file",
   "repository": "shinnn/read-bplist",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
