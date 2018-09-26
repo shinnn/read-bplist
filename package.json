@@ -1,47 +1,48 @@
 {
-  "name": "read-bplist",
-  "version": "1.0.0",
-  "description": "Parse a macOS Binary Plist (.bplist) file",
-  "repository": "shinnn/read-bplist",
-  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
-  "scripts": {
-    "pretest": "eslint --fix --format=codeframe index.js test.js",
-    "test": "nyc --reporter=html --reporter=text node test.js"
-  },
-  "license": "MIT",
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "bin",
-    "binary",
-    "macos",
-    "plist",
-    "bplist",
-    "file",
-    "read",
-    "load",
-    "parse",
-    "parser",
-    "convert",
-    "promise",
-    "async",
-    "asynchronous"
-  ],
-  "dependencies": {
-    "bplist-parser": "^0.1.1",
-    "inspect-with-kind": "^1.0.2"
-  },
-  "devDependencies": {
-    "@shinnn/eslint-config-node": "^4.0.2",
-    "bplist-creator": "^0.0.7",
-    "eslint": "^4.4.1",
-    "nyc": "^11.1.0",
-    "rmfr": "^1.0.3",
-    "tape": "^4.8.0",
-    "write-file-atomically": "^1.0.0"
-  },
-  "eslintConfig": {
-    "extends": "@shinnn/node"
-  }
+	"name": "read-bplist",
+	"version": "1.0.0",
+	"description": "Parse a macOS Binary Plist (.bplist) file",
+	"repository": "shinnn/read-bplist",
+	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
+	"license": "MIT",
+	"scripts": {
+		"pretest": "eslint .",
+		"test": "nyc node test.js"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"bin",
+		"binary",
+		"macos",
+		"plist",
+		"bplist",
+		"file",
+		"read",
+		"load",
+		"parse",
+		"parser",
+		"convert",
+		"promise",
+		"async",
+		"asynchronous"
+	],
+	"dependencies": {
+		"bplist-parser": "^0.1.1"
+	},
+	"devDependencies": {
+		"@shinnn/eslint-config": "^6.7.1",
+		"bplist-creator": "^0.0.7",
+		"eslint": "^5.6.0",
+		"nyc": "^13.0.1",
+		"nyc-config-common": "^1.0.0",
+		"tape": "^4.9.1"
+	},
+	"eslintConfig": {
+		"extends": "@shinnn"
+	},
+	"nyc": {
+		"extends": "nyc-config-common"
+	}
 }
