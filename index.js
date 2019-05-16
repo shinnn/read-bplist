@@ -1,12 +1,10 @@
 'use strict';
 
-const {promisify} = require('util');
-const {readFile} = require('fs');
+const {readFile} = require('fs').promises;
 
 const {parseBuffer} = require('bplist-parser');
 
 const PATH_ERROR = 'Expected a path to a binary plist file';
-const promisifiedReadFile = promisify(readFile);
 
 module.exports = async function readBplist(...args) {
 	const argLen = args.length;
@@ -33,5 +31,5 @@ module.exports = async function readBplist(...args) {
 		}
 	}
 
-	return parseBuffer(await promisifiedReadFile(path))[0];
+	return parseBuffer(await readFile(path))[0];
 };
