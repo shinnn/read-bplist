@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/read-bplist.svg)](https://www.npmjs.com/package/read-bplist)
 [![Build Status](https://travis-ci.com/shinnn/read-bplist.svg?branch=master)](https://travis-ci.com/shinnn/read-bplist)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/read-bplist.svg)](https://coveralls.io/github/shinnn/read-bplist?branch=master)
+[![codecov](https://codecov.io/gh/shinnn/read-bplist/branch/master/graph/badge.svg)](https://codecov.io/gh/shinnn/read-bplist)
 
 A [Node.js](https://nodejs.org/) module to parse a Binary macOS Plist (.bplist) file
 
