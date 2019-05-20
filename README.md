@@ -17,7 +17,7 @@ import readBplist from 'read-bplist';
 
 ## Installation
 
-[Use](https://docs.npmjs.com/cli/install) [npm]https://docs.npmjs.com/about-npm/).
+[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/about-npm/).
 
 ```
 npm install read-bplist
@@ -31,11 +31,9 @@ import readBplist from 'read-bplist';
 
 ### readBplist(*path*)
 
-*path*: `string | Buffer | Uint8Array | URL` (a file path) or `integer` (a file descriptor)
+*path*: `string | Buffer | Uint8Array | URL` (a file path) or `integer` (a file descriptor)  
 Return: `Promise<Object>`
 
 ## License
 
-Copyright (c) 2016 - 2019 [Watanabe Shinnosuke](https://github.com/shinnn)
-
-Licensed under [the MIT License](./LICENSE).
+[ISC License](./LICENSE) © 2019 Watanabe Shinnosuke
